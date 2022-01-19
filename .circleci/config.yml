@@ -4,4 +4,4 @@ jobs:
    steps:
     - checkout
     - run: docker build -t nivankovic/docker-react -f Dockerfile.dev .
-    - run: docker run nivankovic/docker-react npm run test -- --coverage
+    - run: docker run -e CI=true nivankovic/docker-react npm run test -- --coverage
