@@ -3,5 +3,6 @@ jobs:
    machine: true
    steps:
     - checkout
+    - setup_remote_docker
     - docker build -t nivankovic/docker-react -f Dockerfile.dev .
     - docker run nivankovic/docker-react npm run test -- --coverage
