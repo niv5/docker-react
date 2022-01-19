@@ -1,0 +1,7 @@
+jobs:
+ build:
+   machine: true
+   steps:
+    - checkout
+    - docker build -t nivankovic/docker-react -f Dockerfile.dev .
+    - docker run nivankovic/docker-react npm run test -- --coverage
